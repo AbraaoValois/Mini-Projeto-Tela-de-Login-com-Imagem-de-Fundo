@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>PEX DESCOMPLICA - Login</title>
+</head>
+
+<body>
+    
+    <div class="container">
+
+        
+        <div class="bg-img">
+            <img src="/assets/images/nicholas_cunningham9269_In_the_Qing_Dynasty_of_China_people_on__45e6560a-ae15-40dc-a535-5c9fb36bc64a.png" alt="img-fundo">
+            <div class="form-container">
+                <h1>Entrar</h1>
+                <form id="loginForm">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    
+                    <button type="submit">Entrar</button>
+                    <p id="errorMessage" class="error"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let errorMessage = document.getElementById("errorMessage");
+            
+            // Simulação de usuário e senha cadastrados
+            const user = "usuario@email.com";
+            const pass = "123456";
+            
+            if (email === user && password === pass) {
+                alert("Login realizado com sucesso!");
+                window.location.href = "blog.html"; // Redireciona para a página do blog
+            } else {
+                errorMessage.textContent = "E-mail ou senha incorretos.";
+                errorMessage.style.color = "red";
+            }
+        });
+    </script>
+</body>
+
+</html>

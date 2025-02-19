@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem de fundo */
+.bg-img {
+    width: 100%;
+    max-width: 500px; /* Reduzindo a largura da imagem */
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+/* Formulário sobre a imagem */
+.form-container {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2); /* Fundo transparente */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+    padding: 12px; /* Reduzindo o espaçamento interno */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 200px; /* Diminuindo a largura do formulário */
+}
+/* Estilização dos inputs */
+label {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Botão estilizado */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d0b282;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #b89a6f;
+}
+
+/* Mensagem de erro */
+#errorMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+}
